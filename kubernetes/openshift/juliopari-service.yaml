@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-calculadora
+  namespace: aprendeibm-dev
+spec:
+  selector:
+    app: nodejs-calculadora
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000

@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "ee56c779-f1b3-49a2-8dc2-eadd276eb6ea",
+		"name": "bian-microservicio-nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3256611",
+		"_collection_link": "https://grey-shuttle-7611.postman.co/workspace/ARQUITECTURABANK~93f6e1f8-702c-43ae-96b8-b77cbaad9720/collection/3256611-ee56c779-f1b3-49a2-8dc2-eadd276eb6ea?action=share&source=collection_link&creator=3256611"
+	},
+	"item": [
+		{
+			"name": "personal-information",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numero1\": 1,\r\n    \"numero2\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/employee-data-management/v1.0/personal-information/retrieve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employee-data-management",
+						"v1.0",
+						"personal-information",
+						"retrieve"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

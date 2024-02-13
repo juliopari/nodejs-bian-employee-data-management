@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-calculadora
+  namespace: aprendeibm-dev
+spec:
+  selector:
+    matchLabels:
+      app: nodejs-calculadora
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nodejs-calculadora
+    spec:
+      containers:
+      - name: nodejs-calculadora
+        image: juliopari/nodejs-calculadora:v1
+        ports:
+        - name: http
+          containerPort: 3000

@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "01171d9d-5858-4d7a-8476-3811aa8721e4",
+		"name": "bian-microservicio-nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3256611",
+		"_collection_link": "https://grey-shuttle-7611.postman.co/workspace/ARQUITECTURABANK_SCOTIABANK~1d01d2ee-4d9c-4639-9a56-6a714b2ab8f6/collection/3256611-01171d9d-5858-4d7a-8476-3811aa8721e4?action=share&source=collection_link&creator=3256611"
+	},
+	"item": [
+		{
+			"name": "bian-employee-data-management (localhost)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RetrievePersonalInformation\": {\r\n        \"Person\": {\r\n            \"PersonIdentification\": {\r\n                \"TypeOfIdentification\": \"cedula\",\r\n                \"IdentityCardNumber\": \"456745674567\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/employee-data-management/v1.0/personal-information/retrieve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employee-data-management",
+						"v1.0",
+						"personal-information",
+						"retrieve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bian-employee-data-management (docker)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RetrievePersonalInformation\": {\r\n        \"Person\": {\r\n            \"PersonIdentification\": {\r\n                \"TypeOfIdentification\": \"cedula\",\r\n                \"IdentityCardNumber\": \"456745674567\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/employee-data-management/v1.0/personal-information/retrieve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"employee-data-management",
+						"v1.0",
+						"personal-information",
+						"retrieve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bian-employee-data-management (k8s)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RetrievePersonalInformation\": {\r\n        \"Person\": {\r\n            \"PersonIdentification\": {\r\n                \"TypeOfIdentification\": \"cedula\",\r\n                \"IdentityCardNumber\": \"4567456745679\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://165.227.251.112/employee-data-management/v1.0/personal-information/retrieve",
+					"protocol": "http",
+					"host": [
+						"165",
+						"227",
+						"251",
+						"112"
+					],
+					"path": [
+						"employee-data-management",
+						"v1.0",
+						"personal-information",
+						"retrieve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "core-no-bian-employee-data-management",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"documentType\": \"cedula\",\r\n    \"documentNumber\": \"456745678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apis.arquitecturabank.com/core/no-bian-employee-data-management/v1/personal-information",
+					"protocol": "https",
+					"host": [
+						"apis",
+						"arquitecturabank",
+						"com"
+					],
+					"path": [
+						"core",
+						"no-bian-employee-data-management",
+						"v1",
+						"personal-information"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -11,7 +11,6 @@ class EmployeeDataManagementService {
       documentNumber: request_ms.RetrievePersonalInformation.Person.PersonIdentification.IdentityCardNumber
     };
 
-
     const response_backend = await employeeDataManagementRepository.getPersonalInformation(request_backend);
 
     //transformation no BIAN -> BIAN
